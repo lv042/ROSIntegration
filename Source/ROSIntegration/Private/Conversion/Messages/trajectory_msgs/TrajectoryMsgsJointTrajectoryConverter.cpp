@@ -3,7 +3,7 @@
 
 UTrajectoryMsgsJointTrajectoryConverter::UTrajectoryMsgsJointTrajectoryConverter()
 {
-	_MessageType = "sensor_msgs/JointTrajectory";
+	_MessageType = "trajectory_msgs/JointTrajectory";
 }
 
 bool UTrajectoryMsgsJointTrajectoryConverter::ConvertIncomingMessage(const ROSBridgePublishMsg* message, TSharedPtr<FROSBaseMsg>& BaseMsg)
@@ -17,7 +17,7 @@ bool UTrajectoryMsgsJointTrajectoryConverter::ConvertIncomingMessage(const ROSBr
 
 bool UTrajectoryMsgsJointTrajectoryConverter::ConvertOutgoingMessage(TSharedPtr<FROSBaseMsg> BaseMsg, bson_t** message)
 {
-	//auto CastMsg = StaticCastSharedPtr<ROSMessages::sensor_msgs::JointTrajectory>(BaseMsg);
+	//auto CastMsg = StaticCastSharedPtr<ROSMessages::trajectory_msgs::JointTrajectory>(BaseMsg);
 	//*message = bson_new();
 	//_bson_append_joint_trajectory(*message, CastMsg.Get());
 	return true;
